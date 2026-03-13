@@ -1,6 +1,8 @@
 #ifndef COLA_HPP_INCLUDED
 #define COLA_HPP_INCLUDED
 
+#include <exception>
+
 template<typename T>
 class Cola
 {

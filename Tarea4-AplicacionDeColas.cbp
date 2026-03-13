@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Banco.cpp" />
+		<Unit filename="Banco.hpp" />
 		<Unit filename="Cola.hpp" />
 		<Unit filename="Cola.tpp" />
 		<Unit filename="Persona.cpp" />

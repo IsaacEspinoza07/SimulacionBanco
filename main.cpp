@@ -4,6 +4,7 @@
 #include <string>
 #include "Cola.hpp"
 #include "Persona.hpp"
+#include "Banco.hpp"
 
 using namespace std;
 
@@ -11,10 +12,11 @@ int main()
 {
     srand(time(nullptr));
     try{
-        Persona p("nombres.txt","apellidos.txt");
-        cout << p;
-        p.Ot();
-
+        Banco bancoLCC;
+        for(int i = 0; i < 10; ++i){
+            bancoLCC.ImprimirBanco();
+            bancoLCC.llegaCliente();
+        }
 
     }catch(const char* error){
         cerr << "Error: " << error << endl;
