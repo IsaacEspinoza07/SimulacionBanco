@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1773379667 source:/home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<string>
+	"Cola.hpp"
+	"Persona.hpp"
+
+1773366499 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Cola.hpp
+	"Cola.tpp"
+
+1773366826 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Cola.tpp
+	"Cola.hpp"
+	<exception>
+	<iostream>
+
+1773370583 source:/home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Persona.cpp
+	"Persona.hpp"
+	<fstream>
+	<cstdlib>
+
+1773379685 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Persona.hpp
+	<iostream>
+	<string>
+	<vector>
+

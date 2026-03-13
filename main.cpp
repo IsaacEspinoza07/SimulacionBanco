@@ -3,18 +3,18 @@
 #include <ctime>
 #include <string>
 #include "Cola.hpp"
+#include "Persona.hpp"
 
 using namespace std;
 
 int main()
 {
+    srand(time(nullptr));
     try{
+        Persona p("nombres.txt","apellidos.txt");
+        cout << p;
+        p.Ot();
 
-        Cola<string> c;
-        c.Agregar("Hola");
-        c.Agregar(" Mundo!");
-
-        c.Imprimir();
 
     }catch(const char* error){
         cerr << "Error: " << error << endl;
