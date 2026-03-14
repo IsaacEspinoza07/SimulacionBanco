@@ -23,6 +23,7 @@ class Cola
         bool EstaVacia() const;
         void Vaciar();
         void Imprimir() const; // pa pruebas nomas.
+        void ImprimirLista() const;
 
         // === EXCEPCION DE LA CLASE === //
         class ColaVacia : public std::exception

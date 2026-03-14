@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1773381440 source:/home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/main.cpp
+1773447673 source:/home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -8,32 +8,33 @@
 	"Persona.hpp"
 	"Banco.hpp"
 
-1773380618 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Cola.hpp
+1773427742 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Cola.hpp
 	<exception>
 	"Cola.tpp"
 
-1773366826 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Cola.tpp
+1773427909 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Cola.tpp
 	"Cola.hpp"
+	"Persona.hpp"
 	<exception>
 	<iostream>
 
-1773370583 source:/home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Persona.cpp
+1773432415 source:/home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Persona.cpp
 	"Persona.hpp"
 	<fstream>
 	<cstdlib>
 
-1773379860 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Persona.hpp
+1773428996 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Persona.hpp
 	<iostream>
 	<string>
 	<vector>
 
-1773383583 source:/home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Banco.cpp
+1773448218 source:/home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Banco.cpp
 	"Banco.hpp"
 	<cstdlib>
 	<windows.h>
 	<unistd.h>
 
-1773383573 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Banco.hpp
+1773447531 /home/isaac07/Proyectos/cpp/Tarea4-AplicacionDeColas/Banco.hpp
 	"Cola.hpp"
 	"Persona.hpp"
 

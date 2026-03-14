@@ -11,6 +11,20 @@ int Persona::GenerarTiempo(int tiempoMax)
     return rand() % tiempoMax +1;
 }
 
+Persona::Persona(const Persona &p)
+{
+    *this = p;
+}
+
+Persona &Persona::operator=(const Persona &p)
+{
+    if (this == &p) return *this;
+
+    this->nombre = p.nombre;
+    this->tiempoEspera = p.tiempoEspera;
+
+    return *this;
+}
 
 // Vector porque sino esta dificil moverme sobre el pa agarrar uno aleatorio.
 vector<string> Persona::CargarTextos(const string &texto)
@@ -25,8 +39,19 @@ vector<string> Persona::CargarTextos(const string &texto)
 
     return lineas;
 }
+
+int Persona::ObtenerTiempoEspera()
+{
+    return tiempoEspera;
+}
+void Persona::PasarTiempo()
+{
+    --tiempoEspera;
+}
+
+
 // =======================0 //
-Persona::Persona(const string &nombres, const string &apellidos): tiempoEspera(GenerarTiempo(15))
+Persona::Persona(const string &nombres, const string &apellidos): tiempoEspera(GenerarTiempo(25))
 {
     vector<string> nom = CargarTextos(nombres);
     vector<string> ap = CargarTextos(apellidos);

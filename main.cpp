@@ -12,11 +12,39 @@ int main()
 {
     srand(time(nullptr));
     try{
-        Banco bancoLCC;
-        for(int i = 0; i < 10; ++i){
-            bancoLCC.ImprimirBanco();
-            bancoLCC.llegaCliente();
+        // ===== Parámetros para cambiar de la simulación ===== //
+        int limLlegadaCliente = 5; // cuantos "minutos"
+        int velocidad = 500;
+
+        // ==================================================== //
+        int tiempoBancoAbierto = 200;
+        int tiempoLlegadaCliente = (rand()%limLlegadaCliente) + 1;
+        Banco bancoLCC; // cuantas cajas (default = 3)
+
+
+        // Ciclo principal de la "simulacion"
+        while(bancoLCC.ObtenerTiempoBanco()+1 <= tiempoBancoAbierto){
+            LimpiarPantalla();
+            cout << "Se atenderan tantas personas puedan en " << tiempoBancoAbierto << " minutos.\n";
+            cout << "TIEMPO: " << bancoLCC.ObtenerTiempoBanco() << "\n\n";
+
+
+            if(tiempoLlegadaCliente == 0){
+                bancoLCC.LlegaCliente();
+                tiempoLlegadaCliente = (rand()%limLlegadaCliente + 1);
+            }
+            bancoLCC.PasarTiempo();
+
+            bancoLCC.ImprimirBanco(velocidad);
+
+
+            --tiempoLlegadaCliente;
+            bancoLCC.PasarCliente();
+
         }
+
+        // Resumen de lo sucedido
+        bancoLCC.ImprimirResumen();
 
     }catch(const char* error){
         cerr << "Error: " << error << endl;

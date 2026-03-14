@@ -9,17 +9,25 @@ public:
     Banco(int n = 3);
     ~Banco(); // pues se usa memoria dinámica
 
-    void ImprimirBanco();
-    void llegaCliente();
+    void ImprimirBanco(int ms = 300);
+    void ImprimirResumen();
+    void LlegaCliente();
+    void PasarTiempo();
+    int ObtenerTiempoBanco();
+    void PasarCliente();
 
 private:
     int num_cajas; // pa generalizar chilo, por eso son punteros los otros. 3 porque así se pide.
-    Cola<Persona> *cajas;
+    Persona **enCaja;
+    Cola<Persona> enEspera;
     Cola<Persona> *historialCajas;
-    int capacidadCaja; // generalmente, unas 10 personas esta bien por caja.
-    int TiempoBanco;
+    int tiempoBanco;
 
 };
 
+
+// ======= útilidades ======== //
+void Esperar(int ms);
+void LimpiarPantalla();
 
 #endif // BANCO_HPP_INCLUDED

@@ -12,7 +12,12 @@ class Persona{
 
 public:
     Persona(const string &nombres, const string &apellidos);
+    Persona(const Persona &p); // constructor de copias
+    Persona &operator=(const Persona &p); // op =
+
     vector<string> CargarTextos(const string &texto);
+    int ObtenerTiempoEspera();
+    void PasarTiempo();
 
 private:
     int tiempoEspera;

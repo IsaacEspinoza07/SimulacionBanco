@@ -1,4 +1,5 @@
 #include "Cola.hpp"
+#include "Persona.hpp"
 #include <exception>
 #include <iostream>
 
@@ -111,6 +112,11 @@ T Cola<T>::ObtenerTope() const{
 }
 /* ======================================= */
 template<typename T>
+int Cola<T>::ObtenerTam() const{
+    return this->num_elem;
+}
+/* ======================================= */
+template<typename T>
 bool Cola<T>::EstaVacia() const
 {
     return (cola == nullptr);
@@ -137,6 +143,20 @@ void Cola<T>::Imprimir() const
         explorador = explorador->siguiente;
     }
     cout << "\b\b ";
+
+}
+
+template<typename T>
+void Cola<T>::ImprimirLista() const
+{
+    if(EstaVacia()) return;
+
+    Elemento *explorador = cola->siguiente;
+    for(int i = 0; i < num_elem; ++i){
+        cout << explorador->valor;
+        explorador = explorador->siguiente;
+        cout << endl;
+    }
 
 }
 
