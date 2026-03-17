@@ -29,7 +29,16 @@ void Esperar(int ms)
     #endif // _WIN32
 }
 
+void Pausar()
+{
+    #ifdef _WIN32
+        system("pause");
+    #else
+        std::cout << "Presione una tecla para continuar...";
+        std::cin.get();
+    #endif // _WIN32
 
+}
 
 // ===== CONSTRUCTORES ====== //
 
@@ -75,7 +84,11 @@ void Banco::PasarCliente()
             Persona atendida = enEspera.ObtenerTope();
             historialCajas[i].Agregar(atendida);
             enEspera.Eliminar();
-            enCaja[i] = new Persona(atendida);
+            try{
+                enCaja[i] = new Persona(atendida);
+            }catch(std::bad_alloc &){
+                throw "No hay suficiente memoria";
+            }
             return;
         }
     }
